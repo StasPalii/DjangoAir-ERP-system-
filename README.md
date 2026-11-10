@@ -84,3 +84,21 @@ Access control strictly adheres to the following organizational hierarchy (sorte
 ---
 
 ## 🗺️ System Development Plan
+### 🎯 Priority Steps (Phase 1 — Core Infrastructure)
+1. **Database Modeling & Core Entities:** Define ORM models for `Airplane`, `Seat Type`, `Flight`, `Passenger`, and `Ticket`.
+2. **UML Class Diagram:** Document domain relationships, inheritance, and business logic methods.
+3. **Authentication & RBAC:** Implement Django custom user models, permissions, and group-based roles for staff hierarchy.
+
+### Phase 2 — Customer Booking Engine & Notifications
+* Implement search, selection, options attachment, and checkout workflow.
+* Integrate Celery tasks with Redis for background email generation (tickets & credentials delivery).
+* Build Customer Personal Cabinet.
+
+### Phase 3 — Staff Portal & Workflows
+* Build UI dashboards for Check-in Managers and Gate Managers.
+* Implement Supervisor management panels (Flight management & Staff access rights).
+
+### Phase 4 — Optional Enhancements & Services
+* Implement Payment Gateway Emulation and Social Senders (Google OAuth).
+* Deploy Flask mock services for WebSockets and Webhook handling.
+* Containerize the full stack using Docker & Nginx setup.
